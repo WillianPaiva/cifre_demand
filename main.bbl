@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{gwen2007faces}
+CL~Gwen, C~Marian, Stewart Bartlett, and Kang Lee.
+\newblock Faces of pain: automated measurement of spontaneous all facial
+  expressions of genuine and posed pain.
+\newblock 2007.
+
+\bibitem{lucey2011automatically}
+Patrick Lucey, Jeffrey~F Cohn, Iain Matthews, Simon Lucey, Sridha Sridharan,
+  Jessica Howlett, and Kenneth~M Prkachin.
+\newblock Automatically detecting pain in video through facial action units.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part B
+  (Cybernetics)}, 41(3):664--674, 2011.
+
+\bibitem{wong1996wong}
+Donna~Lee Wong, M~Hockenberry-Eaton, D~Wilson, ML~Winkelstein, and P~Schwartz.
+\newblock Wong-baker faces pain rating scale.
+\newblock {\em Home Health Focus}, 2(8):62, 1996.
+
+\bibitem{mccaffery1999pain}
+M~McCaffery and C~Pasero.
+\newblock Pain: clinical manual . st louis, mo: Mosby, 1999.
+
+\bibitem{portenoy1996visual}
+RK~Portenoy and RM~Tanner.
+\newblock Visual analog scale and verbal pain intensity scale: from pain
+  management: theory and practice.
+\newblock {\em Oxford University Press, Inc}, 1:996, 1996.
+
+\bibitem{melzack1975mcgill}
+Ronald Melzack.
+\newblock The mcgill pain questionnaire: major properties and scoring methods.
+\newblock {\em Pain}, 1(3):277--299, 1975.
+
+\bibitem{galer1997development}
+Bradley~S Galer and Mark~P Jensen.
+\newblock Development and preliminary validation of a pain measure specific to
+  neuropathic pain the neuropathic pain scale.
+\newblock {\em Neurology}, 48(2):332--338, 1997.
+
+\bibitem{gracely1988descriptor}
+Richard~H Gracely and Donna~M Kwilosz.
+\newblock The descriptor differential scale: applying psychophysical principles
+  to clinical pain assessment.
+\newblock {\em Pain}, 35(3):279--288, 1988.
+
+\end{thebibliography}

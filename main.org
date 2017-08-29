@@ -1,0 +1,46 @@
+#+OPTIONS: author:nil
+#+OPTIONS: toc:nil
+#+TITLE: yes i know we need a title
+#+DATE:
+#+LaTeX_CLASS: article
+#+LATEX_HEADER: \usepackage{minted}
+
+* Context
+  The beginning of XXIth century sees a drastic increase of applications coming as an assistance to numerous human activities,
+  among which medicine is one of the main domains. And the use of technology to the healthcare system is the focus today, with
+  technologies ranging from robots to assist in surgery to gadgets that measure sugar levels and help diabetic people.
+  Among those areas, an important one deals with pain, which is a complex subject to master. The main objectives will consist in
+  being able to properly measure pain levels is of a great importance, as it will help medical doctors to provide a precise treatment
+  and also allow pharmaceutical companies to  have a better feedback for the development of treatments, the last being pharmaceutical or not.
+  But pain assessment is not a simple task and has been a challenge even for humans. Many scales and methods have been created to tackle
+ such a problem cite:wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor with
+ limited efficiency. It is still so far difficult to  have an accurate assessment of pain, notably chronic pain.
+  As a matter of fact, as pain is a subjective feeling, the most used measurement is the auto evaluation, but even if it gives fairly acceptable
+ results, it still falls short on some aspects like simulated pain cite:gwen2007faces, or, most commonly, when the patient has difficulties to
+ communicate, as is the case of infants and some elderly people cite:lucey2011automatically.
+  And the creation of a method capable of assessing precisely the level of pain felt by patients can help the present diagnosis system overcome
+ a complicated barrier.
+
+
+** state of the art
+
+
+
+** methodological appro
+* objectives
+** expected results
+** scientific and technological challenges
+* organization
+** general organization
+** planning
+   T0 + 6  months: gathering and study of the data
+   T0 + 12 months: assessment based on the facial expression
+   T0 + 18 months: assessment of emotions from natural language analyses
+   T0 + 24 months: assessment by combining the 2 methods
+   T0 + 30 months: formalization, validations publications and theses
+   T0 + 36 months: theses and defense
+
+
+
+bibliographystyle:unsrt
+bibliography:repport.bib
