@@ -32,15 +32,15 @@
     "hyperref"
     "minted")
    (LaTeX-add-labels
-    "sec:orgfcdfbb1"
-    "sec:org427a2f8"
-    "sec:org36dbbd7"
-    "sec:org82ceda9"
-    "sec:orgd3c0933"
-    "sec:orgd7deb1e"
-    "sec:org2595ef6"
-    "sec:org3f74e21"
-    "sec:org04ac87b")
+    "sec:org7b1bfe5"
+    "sec:org27f4b13"
+    "sec:org9ba0b98"
+    "sec:org310d50e"
+    "sec:orgbe4a346"
+    "sec:org1c8f38c"
+    "sec:orgde7aa5c"
+    "sec:orgc03a989"
+    "sec:orgaa41bec")
    (LaTeX-add-bibliographies
     "repport"))
  :latex)

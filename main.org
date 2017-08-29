@@ -1,6 +1,6 @@
 #+OPTIONS: author:nil
 #+OPTIONS: toc:nil
-#+TITLE: yes i know we need a title
+#+TITLE: to be defined
 #+DATE:
 #+LaTeX_CLASS: article
 #+LATEX_HEADER: \usepackage{minted}
@@ -24,21 +24,28 @@
 
 ** state of the art
 
+   - talk about the Pittsburgh research
+   - talk about the Aalborg research
 
-
-** methodological appro
+** methodological approach
 * objectives
 ** expected results
 ** scientific and technological challenges
 * organization
 ** general organization
 ** planning
-   T0 + 6  months: gathering and study of the data
-   T0 + 12 months: assessment based on the facial expression
-   T0 + 18 months: assessment of emotions from natural language analyses
-   T0 + 24 months: assessment by combining the 2 methods
-   T0 + 30 months: formalization, validations publications and theses
-   T0 + 36 months: theses and defense
+
+   - T0 + 6  months: gathering and study of the data
+
+   - T0 + 12 months: assessment based on the facial expression
+
+   - T0 + 18 months: assessment of emotions from natural language analyses
+
+   - T0 + 24 months: assessment by combining the 2 methods
+
+   - T0 + 30 months: formalization, validations publications and theses
+
+   - T0 + 36 months: theses and defense
 
 
 
