@@ -3,6 +3,8 @@
  (lambda ()
    (LaTeX-add-bibitems
     "milton2013caring"
+    "bellantonio2016spatio"
+    "giarratano1998expert"
     "lucey2011automatically"
     "gwen2007faces"
     "wong1996wong"
@@ -11,6 +13,8 @@
     "melzack1975mcgill"
     "galer1997development"
     "gracely1988descriptor"
-    "hale1997emotional"))
+    "hale1997emotional"
+    "ekman1997face"
+    "lucey2011painful"))
  :bibtex)
 
