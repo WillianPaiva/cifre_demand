@@ -59,6 +59,13 @@
    of the considered sequence, and to get a better precision for the result
    achieving a scale between /"no pain"/ , /"weak pain"/ or /"strong pain"/ what
    is significantly better.
+   What all those approaches has in common is the fact that it uses the same
+   data base for the training and it don't give a result with enough accuracy to
+   to be a reliable tool. Also both researches rely solely on facial expressions
+   and not taking in consideration the other factors like voice tone and the
+   semantics used on the dialog to be able to analyze the emotional component
+   what is an important factor to be able to properly assess the patient pain
+   level cite:hale1997emotional.
 
 ** Methodological approach
    This thesis proposes a new approach to the problem by using a new dataset
