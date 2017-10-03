@@ -1,4 +1,4 @@
-% Created 2017-09-01 Fri 20:48
+% Created 2017-10-03 Tue 11:08
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -18,18 +18,18 @@
 \date{}
 \title{to be defined}
 \hypersetup{
- pdfauthor={Willian Ver Valen Paiva},
+ pdfauthor={Willian Ver Valem Paiva},
  pdftitle={to be defined},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.0.50 (Org mode 9.0.10)}, 
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.1)},
  pdflang={English}}
 \begin{document}
 
 \maketitle
 
 \section{Context}
-\label{sec:orgb618ff1}
+\label{sec:org9cd067c}
 The beginning of XXIth century sees a drastic increase of applications coming
 as an assistance to numerous human activities, among which medicine is one of
 the main domains. And the use of technology for the healthcare system is the
@@ -37,89 +37,109 @@ focus today, with technologies ranging from robots to assist in surgery to
 gadgets that measure sugar levels and help diabetic people.
 
 Among those areas, an important one deals with pain, which is a complex
-subject to master. The main objectives of the research project, which consists 
+subject to master. The main objectives of the research project, which consists
 in being able to properly measure pain levels, is of a great importance, as it
 will help medical doctors to provide a precise treatment especially for
 patients suffering from chronic pain condition. It will also allow
 pharmaceutical companies to have a better feedback from their clients for the
-development of treatments, whether they are pharmaceutical or not.  
+development of treatments, whether they are pharmaceutical or not.
 
 But pain assessment is not a simple task and has been a long lasting challenge even for
 human evaluators. Many scales and methods have been created to tackle such a problem
 \cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
 with limited efficiency. So far, it is still difficult to  have an accurate
 assessment of pain, all the more important when it comes to deal with chronic
-pain.  
+pain.
 
 As a matter of fact, as pain is a subjective feeling, the most used
 measurement is the auto evaluation of the patient, but even if it gives fairly acceptable
 results, it still falls short on some aspects, notably when it comes to simulated pain
 \cite{gwen2007faces}, or, most commonly, when the patient has difficulties to
 communicate, as is the case of infants and some elderly people
-\cite{lucey2011automatically}. 
+\cite{lucey2011automatically}.
 
 And the creation of a method capable of providing a precise assessment for the level of pain
 felt by patients could help the present diagnosis system overcome a complicated
-barrier. 
+barrier.
 
 
 \subsection{State of the art}
-\label{sec:orge104ed8}
+\label{sec:orgd3a24ca}
 Up to now, some serious research has been done to achieve a reliable pain
 detection via facial expressions. To reach this objective, the systems used datasets of images
-labeled with FACS codes (\emph{Facial Action Coding System}) \cite{lucey2011painful}. 
+labeled with FACS codes (\emph{Facial Action Coding System}) \cite{lucey2011painful}.
 
 The main work done on the subject was the research carried at the  Pittsburgh
 University \emph{"Automatically Detecting Pain in Video Through Facial Action
 Units"} \cite{lucey2011automatically}. This research was mainly based on the
 use of the FACS to detect pain on a given frame, but obtained elementary
-results such as \emph{"pain or no pain"}.  
+results such as \emph{"pain or no pain"}.
 
 Another research, done on the same subject with the same dataset, is the
 research carried at the university of Aalborg \cite{bellantonio2016spatio}.
 This more recent research did achieve more promising results by using a
 combination of convolutional neural networks, and recurrent neural networks.
 By using the combination of these two methods, it was possible to consider
-not uniquely the one frame and FACS, but also to analyse the previous frames
+not uniquely the one frame and FACS, but also to analyze the previous frames
 of the considered sequence, and to get a better precision for the result
 achieving a scale between \emph{"no pain"} , \emph{"weak pain"} or \emph{"strong pain"} what
-is significantly better.  
+is significantly better.
 
 \subsection{Methodological approach}
-\label{sec:orgc28aa75}
+\label{sec:org15c6af8}
 This thesis proposes a new approach to the problem by using a new dataset
 generated with the contribution of volunteering people who suffer from
 chronic pain. While a new dataset is a good start, train a deep learning
-model can take large amounts of data.  
+model can take large amounts of data.
 
 But on the other side we can rely on the practioners who have a long experience and
 knowledge of the problem, and should not be excluded from the scope.
-A practioner uses more than just an image to assess pain, they take many other
+A practitioner uses more than just an image to assess pain, they take many other
 factors into consideration. This is why the project proposes to tap the
 practioners' experience to compensate the small amount of training data, what
-could be compared to the functionning of expert systems
+could be compared to the functioning of expert systems
 \cite{giarratano1998expert}.
 
 However it is not clear up to this day how it will be possible to reconcile deep
 learning and expert systems. The aim of this thesis will be to explore ways
-to achieve this.  
+to achieve this.
 
 
 \section{Objectives}
-\label{sec:org64d7903}
-\subsection{Expected results}
-\label{sec:org9fb423b}
+\label{sec:org509d72d}
+As the data on the subject is some how limited one of the main focus of this
+these will be to train \emph{deep learning} models capable of accurate measure pain
+level on a video, using reduced data by importing core decision factors from
+experts that already have knowledge on pain assessment.
+And make the learning process less dependent of huge amount of data, but yet
+this process should not sacrifice the capabilities of generalization of the
+model.
 
 \subsection{Scientific and technological challenges}
-\label{sec:orgd5ce104}
+\label{sec:org151988f}
+The scientific challenges to be explored on this theses will be:
+\begin{itemize}
+\item Propose an model capable of accurate measure pain with efficacy.
+\item Identify the main decision points that can be imported from experts, and
+that can be used to improve the models learning.
+\end{itemize}
+
 
 \section{Organization}
-\label{sec:orga849b58}
-\subsection{General organization}
-\label{sec:org1d18b0c}
+\label{sec:orgbd708cc}
+The these will take place on a period of 36 months and during all the duration
+the time will be shared between the hosting laboratory (LABRI university of
+Bordeaux) and the company (Lucine).
 
 \subsection{Planning}
-\label{sec:orgbf4df68}
+\label{sec:orgf9a9080}
+\begin{itemize}
+\item T0 + 6m:
+\item T0 + 12m:
+\item T0 + 18m:
+\item T0 + 24m:
+\item T0 + 36m: Writing of thesis and defense
+\end{itemize}
 
 
 
