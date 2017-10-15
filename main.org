@@ -6,107 +6,105 @@
 #+LATEX_HEADER: \usepackage{minted}
 
 * Context
-  The beginning of XXIth century sees a drastic increase of applications coming
-  as an assistance to numerous human activities, among which medicine is one of
-  the main domains. And the use of technology for the healthcare system is the
-  focus today, with technologies ranging from robots to assist in surgery to
-  gadgets that measure sugar levels and help diabetic people.
-
-  Among those areas, an important one deals with pain, which is a complex
-  subject to master. The main objectives of the research project, which consists
-  in being able to properly measure pain levels, is of a great importance, as it
-  will help medical doctors to provide a precise treatment especially for
-  patients suffering from chronic pain condition. It will also allow
-  pharmaceutical companies to have a better feedback from their clients for the
-  development of treatments, whether they are pharmaceutical or not.
-
-  But pain assessment is not a simple task and has been a long lasting challenge even for
-  human evaluators. Many scales and methods have been created to tackle such a problem
-  cite:wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor
-  with limited efficiency. So far, it is still difficult to  have an accurate
-  assessment of pain, all the more important when it comes to deal with chronic
-  pain.
-
-  As a matter of fact, as pain is a subjective feeling, the most used
-  measurement is the auto evaluation of the patient, but even if it gives fairly acceptable
-  results, it still falls short on some aspects, notably when it comes to simulated pain
-  cite:gwen2007faces, or, most commonly, when the patient has difficulties to
-  communicate, as is the case of infants and some elderly people
-  cite:lucey2011automatically.
-
-  And the creation of a method capable of providing a precise assessment for the level of pain
-  felt by patients could help the present diagnosis system overcome a complicated
-  barrier.
+  Le début du XXIème siècle a vu une augmentation drastique d’applications informatiques
+  apportant une assistance à de nombreuses activités humaines, et parmi celles ci, notamment, le
+  secteur de la médecine. Et l’utilisation de la technologie appliquée à la santé est devenu un des
+  points focaux d’intérêt, allant de l’emploi de robots assistants en chirurgie à un certain nombre
+  d’applications plus modestes destinées par exemple à mesurer le taux de sucre dans le sang, afin d’
+  assister les diabétiques.
+  Dans ce champ de la santé assistée par ordinateur, un des domaines importants est celui qui
+  s’adresse à la gestion de la douleur, lequel est un sujet complexe à maîtriser. L’objectif principal de
+  ce projet de recherche, qui consiste à pouvoir mesurer correctement les nouveaux de douleur, est
+  d’une grande importance, car il pourra aider les médecins à fournir un traitement adapté avec
+  précision aux patients affectés de douleurs chroniques. Il pourra également permettre aux
+  compagnies pharmaceutiques de bénéficier d’un meilleur feedback de la part de leurs clients pour le
+  développement de traitements, qu’ils soient médicamenteux ou non.
+  Mais la mesure de la douleur n’est pas une tâche facile, et a constitué depuis longtemps un
+  défi, même pour des évaluateurs humains. De nombreuses échelles et méthodes de mesure ont été
+  créées pour résoudre une telle question cite:wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor
+  avec une efficacité limitée. Jusqu’à ce jour, il
+  est encore difficile d’arriver à une mesure précise de la douleur, d’autant plus cruciale quand on se
+  trouve dans le domaine de la douleur chronique.
+  En réalité, du fait que la douleur est une sensation subjective, la mesure la plus utilisée est
+  l’auto-évaluation par le patient, mais même si cette mesure donne des résultats relativement
+  acceptables, elle est encore insuffisante sur certains aspects, notamment quand on en vient à la
+  notion de douleur simulée cite:gwen2007faces,
+  ou, plus couramment, lorsque le patient a des difficultés à communiquer,
+  comme lorsqu’il s’agit d’enfants ou de personnes âgées cite:lucey2011automatically.
+  Et la création d’une méthode capable de fournir une mesure précise du niveau de douleur
+  ressentie par le patient pourrait aider le système actuel de diagnostic à dépasser une barrière
+  difficile.
 
 
 ** State of the art
-   Up to now, some serious research has been done to achieve a reliable pain
-   detection via facial expressions. To reach this objective, the systems used datasets of images
-   labeled with FACS codes (/Facial Action Coding System/) cite:lucey2011painful.
+   Jusqu’à maintenant, il y a eu un certain nombre de recherches sérieuses pour essayer
+   d’obtenir un système de détection de la douleur par l’analyse des expressions faciales. Afin
+   d’atteindre cet objectif, les systèmes en question ont utilisé des collections de données affectées de
+   codes FACS (/Facial Action Coding System/) cite:lucey2011painful.
 
-   The main work done on the subject was the research carried at the  Pittsburgh
-   University /"Automatically Detecting Pain in Video Through Facial Action
-   Units"/ cite:lucey2011automatically. This research was mainly based on the
-   use of the FACS to detect pain on a given frame, but obtained elementary
-   results such as /"pain or no pain"/.
+   Le principal travail réalisé sur ce sujet a été la recherche menée par l’Université de Pittsburgh
+   /"Automatically Detecting Pain in Video Through Facial Action
+   Units"/ cite:lucey2011automatically. Cette recherche s’est basée
+   principalement sur l’utilisation des FACS pour détecter la douleur sur des images données, mais n’a
+   obtenu que des résultats élémentaires portant sur la présence ou l’absence de douleur (« pain or no
+   pain »).
 
-   Another research, done on the same subject with the same dataset, is the
-   research carried at the university of Aalborg cite:bellantonio2016spatio.
-   This more recent research did achieve more promising results by using a
-   combination of convolutional neural networks, and recurrent neural networks.
-   By using the combination of these two methods, it was possible to consider
-   not uniquely the one frame and FACS, but also to analyze the previous frames
-   of the considered sequence, and to get a better precision for the result
-   achieving a scale between /"no pain"/ , /"weak pain"/ or /"strong pain"/ what
-   is significantly better.
-   What all those approaches has in common is the fact that it uses the same
-   data base for the training and it don't give a result with enough accuracy to
-   to be a reliable tool. Also both researches rely solely on facial expressions
-   and not taking in consideration the other factors like voice tone and the
-   semantics used on the dialog to be able to analyze the emotional component
-   what is an important factor to be able to properly assess the patient pain
-   level cite:hale1997emotional.
+   Une autre recherche, menée sur le même sujet, avec le même ensemble de données, est celle
+   qui a été menée à l’Université d’Aalborg Danemark cite:bellantonio2016spatio.
+   Cette recherche, plus récente, a
+   obtenu des résultats plus prometteurs, en utilisant une combinaison de réseaux neuronaux
+   convolutionnels, et de réseaux neuronaux récurrents. En combinant ces deux méthodes, il a été
+   possible de considérer non seulement une image et ses FACS, mais aussi d’analyser les images
+   préalables de la séquence considérée, et d’obtenir une meilleure précision des résultats, permettant
+   ainsi d’atteindre un échelonnement allant de « absence de douleur « (« no pain ») à « forte
+   douleur » ( strong pain ») en passant par « faible douleur » (« weak pain »), ce qui a constitué une
+   amélioration significative.
+   Tout ce que ces approches ont en commun est le fait qu’elles utilisent la même base de
+   données pour l’apprentissage et cela ne permet pas de fourni une précision suffisante pour
+   constituer un outil vraiment fiable. De plus, ces recherches se fondent uniquement sur les
+
+   expressions faciales, et ne prennent pas en considération d’autres facteurs comme le ton de la voix,
+   et la sémantique utilisée dans le dialogue, ceci afin d’autoriser une analyse de la composante
+   émotionnelle, laquelle est un facteur important lorsqu’il s’agit de mesurer convenablement le niveau
+   de douleur du patient. cite:hale1997emotional.
 
 ** Methodological approach
-   This thesis proposes a new approach to the problem by using a new dataset
-   generated with the contribution of volunteering people who suffer from
-   chronic pain. While a new dataset is a good start, train a deep learning
-   model can take large amounts of data.
-
-   But on the other side we can rely on the practioners who have a long experience and
-   knowledge of the problem, and should not be excluded from the scope.
-   A practitioner uses more than just an image to assess pain, they take many other
-   factors into consideration. This is why the project proposes to tap the
-   practioners' experience to compensate the small amount of training data, what
-   could be compared to the functioning of expert systems
-   cite:giarratano1998expert.
-
-   However it is not clear up to this day how it will be possible to reconcile deep
-   learning and expert systems. The aim of this thesis will be to explore ways
-   to achieve this.
+   Cette thèse propose une nouvelle approche du problème avec l’utilisation d’une nouvelle base
+   de données générée grâce à la contribution de volontaires souffrant de douleurs chroniques. Même
+   si une nouvelle base de données constitue un bon départ, l’apprentissage d’un modèle de deep
+   learning peut exiger d’importantes quantités de données.
+   C’est pourquoi il a été imaginé de compter sur la contribution des praticiens, lesquels ont une
+   longue expérience et une bonne connaissance du problème, et ne devraient pas être exclus de
+   l’approche proposée. En effet, un praticien utilise autre chose qu’une simple image pour mesurer la
+   douleur, mais prend en considération de nombreux autres facteurs. C’est pourquoi le projet propose
+   d’utiliser l’expérience des praticiens pour compenser le faible volume de données d’entraînement,
+   ce qui pourrait se comparer au fonctionnement des systèmes experts cite:giarratano1998expert.
+   Cependant, il n’est pas encore clair à ce jour quelle sera la manière dont il sera possible de
+   concilier le deep learning et les systèmes experts. Le but de cette thèse sera l’exploration des
+   moyens d’y parvenir.
 
 
 * Objectives
-  As the data on the subject is some how limited one of the main focus of this
-  these will be to train /deep learning/ models capable of accurate measure pain
-  level on a video, using reduced data by importing core decision factors from
-  experts that already have knowledge on pain assessment.
-  And make the learning process less dependent of huge amount of data, but yet
-  this process should not sacrifice the capabilities of generalization of the
-  model.
-
+  Comme les données sur ce sujet sont plutôt limitées, l’un des principaux objectifs de cette
+  thèse sera d’entraîner des systèmes de deep learning à être capables de mesurer de la façon la plus
+  précise possible le niveau de douleur sur une vidéo, en utilisant des données réduites grâce à un
+  coeur de facteurs de décision importé, élaborés par des experts qui ont déjà une connaissance de la
+  mesure de la douleur. Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
+  grande quantité de données à analyser, même si on prendra garde de ne pas sacrifier les capacités de
+  généralisation du modèle.
 ** Scientific and technological challenges
-   The scientific challenges to be explored on this theses will be:
-   - Propose an model capable of accurate measure pain with efficacy.
-   - Identify the main decision points that can be imported from experts, and
-     that can be used to improve the models learning.
+   Les défis scientifiques à explorer dans le cadre de cette thèse sont les suivants :
 
+   - proposer un modèle capable de fournir efficacement une mesure de la douleur
+   - identifier les principaux points de décision qui peuvent être importés sur
+     la base des connaissances des experts, et qui peuvent être utilisés pour
+     améliorer les modèles d’apprentissage.
 
 * Organization
-  The these will take place on a period of 36 months and during all the duration
-  the time will be shared between the hosting laboratory (LABRI university of
-  Bordeaux) and the company (Lucine).
-
+  Cette thèse se déroulera sur une période de 36 mois et pendant toute cette durée, le temps de
+  travail se répartira entre le laboratoire hôte (le LABRI, Université de Bordeaux), et la compagnie
+  (Lucine)
+  Planning
 ** Planning
    - T0 + 6m:
    - T0 + 12m:
