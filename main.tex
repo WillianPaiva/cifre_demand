@@ -1,4 +1,4 @@
-% Created 2017-10-15 Sun 14:52
+% Created 2017-10-20 Fri 14:04
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -18,109 +18,136 @@
 \date{}
 \title{to be defined}
 \hypersetup{
- pdfauthor={Willian Ver Valem Paiva},
+ pdfauthor={Willian Ver Valen Paiva},
  pdftitle={to be defined},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.3.1 (Org mode 9.1.1)},
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.1)}, 
  pdflang={English}}
 \begin{document}
 
 \maketitle
 
 \section{Context}
-\label{sec:orged2ba66}
-Le début du XXIème siècle a vu une augmentation drastique d’applications informatiques
-apportant une assistance à de nombreuses activités humaines, et parmi celles ci, notamment, le
-secteur de la médecine. Et l’utilisation de la technologie appliquée à la santé est devenu un des
-points focaux d’intérêt, allant de l’emploi de robots assistants en chirurgie à un certain nombre
-d’applications plus modestes destinées par exemple à mesurer le taux de sucre dans le sang, afin d’
-assister les diabétiques.
-Dans ce champ de la santé assistée par ordinateur, un des domaines importants est celui qui
-s’adresse à la gestion de la douleur, lequel est un sujet complexe à maîtriser. L’objectif principal de
-ce projet de recherche, qui consiste à pouvoir mesurer correctement les nouveaux de douleur, est
-d’une grande importance, car il pourra aider les médecins à fournir un traitement adapté avec
-précision aux patients affectés de douleurs chroniques. Il pourra également permettre aux
-compagnies pharmaceutiques de bénéficier d’un meilleur feedback de la part de leurs clients pour le
-développement de traitements, qu’ils soient médicamenteux ou non.
-Mais la mesure de la douleur n’est pas une tâche facile, et a constitué depuis longtemps un
-défi, même pour des évaluateurs humains. De nombreuses échelles et méthodes de mesure ont été
-créées pour résoudre une telle question \cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
-avec une efficacité limitée. Jusqu’à ce jour, il
-est encore difficile d’arriver à une mesure précise de la douleur, d’autant plus cruciale quand on se
-trouve dans le domaine de la douleur chronique.
-En réalité, du fait que la douleur est une sensation subjective, la mesure la plus utilisée est
-l’auto-évaluation par le patient, mais même si cette mesure donne des résultats relativement
-acceptables, elle est encore insuffisante sur certains aspects, notamment quand on en vient à la
-notion de douleur simulée \cite{gwen2007faces},
-ou, plus couramment, lorsque le patient a des difficultés à communiquer,
-comme lorsqu’il s’agit d’enfants ou de personnes âgées \cite{lucey2011automatically}.
-Et la création d’une méthode capable de fournir une mesure précise du niveau de douleur
-ressentie par le patient pourrait aider le système actuel de diagnostic à dépasser une barrière
-difficile.
+\label{sec:orgf816e45}
+Le début du XXIème siècle a vu une augmentation drastique d’applications
+informatiques apportant une assistance à de nombreuses activités humaines.
+Parmi celles-ci, le secteur de la médecine. L’utilisation de
+la technologie appliquée à la santé est devenue un des points d’intérêt de notre société : 
 
+\begin{itemize}
+\item L’emploi des robots d'assistances en chirurgie
+\item La mesure des données physiologiques (taux de sucre dans le sang pour les diabétiques)
+\item Les serious games pour réapprendre à marché
+\item Le dossier médical partagé
+\end{itemize}
+
+Ces innovations qui parsèment le champ de santé émergent dans un domaine
+important qui est celui de la gestion de la douleur. 
+
+
+L’objectif principal de ce projet de recherche  consiste à pouvoir mesurer
+les niveaux de douleur. En effet, cette solution va pouvoir aider les
+médecins à fournir un traitement adapté  aux patients affectés de douleurs
+chroniques. La mesure de la douleur n’est pas une tâche facile et constitue
+depuis longtemps un défi, même pour des professionnels de santé avertis. De
+nombreuses échelles et méthodes de mesure ont été créées pour résoudre une
+telle question
+\cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
+mais leurs efficacités est limitée. Jusqu’à 
+ce jour, il est encore difficile d’arriver à une mesure précise de la
+douleur. En réalité, du fait que la douleur est une sensation subjective, la
+mesure la plus utilisée est l’auto-évaluation par le patient. Même si cette
+mesure donne
+des résultats relativement acceptables, elle est encore insuffisante sur certains
+aspects, notamment quand on en vient à la notion de douleur simulée \cite{gwen2007faces}, ou,
+plus couramment, lorsque le patient a des difficultés à communiquer, comme
+lorsqu’il s’agit d’enfants ou de personnes âgées \cite{lucey2011automatically}. 
+
+La création d’une méthode capable de fournir une mesure précise du niveau de douleur ressentie
+par le patient pourrait aider le système actuel de diagnostic à dépasser une
+barrière difficile : la subjectivité de la douleur du patient. 
 
 \subsection{State of the art}
-\label{sec:org478492c}
-Jusqu’à maintenant, il y a eu un certain nombre de recherches sérieuses pour essayer
-d’obtenir un système de détection de la douleur par l’analyse des expressions faciales. Afin
-d’atteindre cet objectif, les systèmes en question ont utilisé des collections de données affectées de
-codes FACS (\emph{Facial Action Coding System}) \cite{lucey2011painful}.
+\label{sec:org08f9dfb}
+Jusqu’à maintenant, il y a eu un certain nombre de recherches sérieuses pour
+essayer d’obtenir un système de détection de la douleur spar l’analyse des
+données biométriques (pupilles, verbales, vocales, ECG etc.).La reconnaissance
+faciale est l'un des systèmes qui se révèle le plus prometteur pour mesurer et
+analyser la douleur d'un patient dans une temporalité rapide.  Afin d’atteindre
+cet objectif, plusieurs systèmes ont utilisé des collections de données
+affectées de codes FACS (Facial Action Coding System) \cite{lucey2011painful}. 
 
-Le principal travail réalisé sur ce sujet a été la recherche menée par l’Université de Pittsburgh
-\emph{"Automatically Detecting Pain in Video Through Facial Action
-Units"} \cite{lucey2011automatically}. Cette recherche s’est basée
-principalement sur l’utilisation des FACS pour détecter la douleur sur des images données, mais n’a
-obtenu que des résultats élémentaires portant sur la présence ou l’absence de douleur (« pain or no
-pain »).
+Le principal travail réalisé sur ce sujet a été la recherche menée par
+l’Université de Pittsburgh "Automatically Detecting Pain in Video Through Facial
+Action Units" \cite{lucey2011automatically}. Cette recherche s’est basée principalement sur l’utilisation
+des FACS pour détecter la douleur sur des images données. Les résultats obtenus
+ont été élémentaires. Ils ont porté sur la présence ou l’absence de douleur («
+pain or no pain »). 
 
-Une autre recherche, menée sur le même sujet, avec le même ensemble de données, est celle
-qui a été menée à l’Université d’Aalborg Danemark \cite{bellantonio2016spatio}.
-Cette recherche, plus récente, a
-obtenu des résultats plus prometteurs, en utilisant une combinaison de réseaux neuronaux
-convolutionnels, et de réseaux neuronaux récurrents. En combinant ces deux méthodes, il a été
-possible de considérer non seulement une image et ses FACS, mais aussi d’analyser les images
-préalables de la séquence considérée, et d’obtenir une meilleure précision des résultats, permettant
-ainsi d’atteindre un échelonnement allant de « absence de douleur « (« no pain ») à « forte
-douleur » ( strong pain ») en passant par « faible douleur » (« weak pain »), ce qui a constitué une
-amélioration significative.
-Tout ce que ces approches ont en commun est le fait qu’elles utilisent la même base de
-données pour l’apprentissage et cela ne permet pas de fourni une précision suffisante pour
-constituer un outil vraiment fiable. De plus, ces recherches se fondent uniquement sur les
+Une autre recherche, menée sur le même sujet, avec le même ensemble de données,
+est celle qui a été menée à l’Université d’Aalborg Danemark
+\cite{bellantonio2016spatio}. Cette recherche, plus récente, a obtenu des
+résultats plus prometteurs, en utilisant une combinaison de réseaux neuronaux
+convolutionnels, et de réseaux neuronaux récurrents. En combinant ces deux
+méthodes, il a été possible de considérer non seulement une image et ses FACS,
+mais aussi d’analyser les images préalables de la séquence considérée, et
+d’obtenir une meilleure précision des résultats. Cela permettant ainsi
+d’atteindre un échelonnement allant de « absence de douleur « (« no pain ») à
+« forte douleur » ( strong pain ») en passant par « faible douleur » (« weak
+pain »), cequi a constitué une amélioration significative. 
 
-expressions faciales, et ne prennent pas en considération d’autres facteurs comme le ton de la voix,
-et la sémantique utilisée dans le dialogue, ceci afin d’autoriser une analyse de la composante
-émotionnelle, laquelle est un facteur important lorsqu’il s’agit de mesurer convenablement le niveau
-de douleur du patient. \cite{hale1997emotional}.
+Le point commun de ces recherche est le fait qu’elles utilisent la même base de
+données pour l’apprentissage et cela ne permet pas de fourni une précision
+suffisante pour constituer un outil vraiment fiable en adéquation des
+obligations légales cliniques. De plus, ces recherches se fondent uniquement sur
+les expressions faciales, et ne prennent pas en considération d’autres facteurs
+comme le ton de la voix, et la sémantique utilisée dans le dialogue.  Ceci afin
+d’autoriser une analyse de la composante émotionnelle, laquelle est un facteur
+important lorsqu’il s’agit de mesurer convenablement le niveau de douleur du
+patient  \cite{hale1997emotional}.   
+
 
 \subsection{Methodological approach}
-\label{sec:org00ed8cb}
-Cette thèse propose une nouvelle approche du problème avec l’utilisation d’une nouvelle base
-de données générée grâce à la contribution de volontaires souffrant de douleurs chroniques. Même
-si une nouvelle base de données constitue un bon départ, l’apprentissage d’un modèle de deep
-learning peut exiger d’importantes quantités de données.
-C’est pourquoi il a été imaginé de compter sur la contribution des praticiens, lesquels ont une
-longue expérience et une bonne connaissance du problème, et ne devraient pas être exclus de
-l’approche proposée. En effet, un praticien utilise autre chose qu’une simple image pour mesurer la
-douleur, mais prend en considération de nombreux autres facteurs. C’est pourquoi le projet propose
-d’utiliser l’expérience des praticiens pour compenser le faible volume de données d’entraînement,
-ce qui pourrait se comparer au fonctionnement des systèmes experts \cite{giarratano1998expert}.
-Cependant, il n’est pas encore clair à ce jour quelle sera la manière dont il sera possible de
-concilier le deep learning et les systèmes experts. Le but de cette thèse sera l’exploration des
-moyens d’y parvenir.
+\label{sec:org97cce26}
 
+Cette thèse propose une nouvelle approche du problème avec l’utilisation d’une
+nouvelle base de données générée grâce à la contribution de volontaires
+souffrant de douleurs chroniques (réglementation CNIL / données de santé
+respectées). Même si une nouvelle base de données constitue un bon point de
+départ, l’apprentissage d’un modèle de deep learning peut exiger d’importantes
+quantités de données. C’est pourquoi il a été imaginé de compter sur la
+contribution des praticiens, lesquels ont une longue expérience et une bonne
+connaissance du problème, et ne devraient pas être exclus de l’approche
+proposée. 
+
+En effet, un praticien utilise autre chose qu’une simple image pour mesurer la
+douleur. Il prend en considération de nombreux autres facteurs. C’est pourquoi
+le projet propose d’utiliser l’expérience des praticiens pour compenser le
+faible volume de données d’entraînement, ce qui pourrait se comparer au
+fonctionnement des systèmes experts \cite{giarratano1998expert}. 
+
+Cependant, il n’est pas encore clair à ce jour quelle sera la manière dont il
+sera possible de concilier le deep learning et les systèmes experts. Le but de
+cette thèse sera l’exploration des moyens d’y parvenir. 
 
 \section{Objectives}
-\label{sec:orgc54e2f3}
-Comme les données sur ce sujet sont plutôt limitées, l’un des principaux objectifs de cette
-thèse sera d’entraîner des systèmes de deep learning à être capables de mesurer de la façon la plus
-précise possible le niveau de douleur sur une vidéo, en utilisant des données réduites grâce à un
-coeur de facteurs de décision importé, élaborés par des experts qui ont déjà une connaissance de la
-mesure de la douleur. Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
-grande quantité de données à analyser, même si on prendra garde de ne pas sacrifier les capacités de
-généralisation du modèle.
+\label{sec:orgf1f9281}
+
+Comme les données sur ce sujet sont plutôt limitées, l’un des principaux
+objectifs de cette thèse sera d’entraîner des systèmes de deep learning à être
+capables de mesurer de la façon la plus précise possible le niveau de douleur
+sur une vidéo, en utilisant des données réduites grâce à un coeur de facteurs de
+décision importé, élaborés par des experts qui ont déjà une connaissance de la
+mesure de la douleur.  
+Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
+grande quantité de données à analyser, même si on prendra garde de ne pas
+sacrifier les capacités de généralisation du modèle.  
+
+
 \subsection{Scientific and technological challenges}
-\label{sec:orgcc64c7c}
+\label{sec:org70ad40f}
+
 Les défis scientifiques à explorer dans le cadre de cette thèse sont les suivants :
 
 \begin{itemize}
@@ -131,13 +158,12 @@ améliorer les modèles d’apprentissage.
 \end{itemize}
 
 \section{Organization}
-\label{sec:org3727189}
-Cette thèse se déroulera sur une période de 36 mois et pendant toute cette durée, le temps de
-travail se répartira entre le laboratoire hôte (le LABRI, Université de Bordeaux), et la compagnie
-(Lucine)
-Planning
+\label{sec:org1cc9eab}
+Cette thèse se déroulera sur une période de 36 mois et pendant toute cette
+durée, le temps de travail se répartira entre le laboratoire hôte (le LABRI,
+Université de Bordeaux), et la compagnie (Lucine) Planning
 \subsection{Planning}
-\label{sec:orgcf02a1b}
+\label{sec:org8a30be3}
 \begin{itemize}
 \item T0 + 6m:
 \item T0 + 12m:
