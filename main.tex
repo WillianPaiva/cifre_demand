@@ -30,72 +30,75 @@
 
 \section{Context}
 \label{sec:orgf816e45}
-Le début du XXIème siècle a vu une augmentation drastique d’applications
-informatiques apportant une assistance à de nombreuses activités humaines.
-Parmi celles-ci, le secteur de la médecine. L’utilisation de
-la technologie appliquée à la santé est devenue un des points d’intérêt de notre société : 
 
+Le début du XXIème siècle a vu une augmentation spectaculaire d’applications
+informatiques apportant une assistance à de nombreuses activités
+humaines, y compris pour le secteur de la médecine. L’utilisation de
+la technologie appliquée à la santé est devenue un des points
+d’intérêt de notre société, par exemple pour 
 \begin{itemize}
-\item L’emploi des robots d'assistances en chirurgie
-\item La mesure des données physiologiques (taux de sucre dans le sang pour les diabétiques)
-\item Les serious games pour réapprendre à marché
-\item Le dossier médical partagé
+\item l’emploi des robots d'assistances en chirurgie~;
+\item la mesure des données physiologiques comme le taux de sucre dans le sang pour les diabétiques~;
+\item les \emph{serious games} pour réapprendre à marcher~;
+\item le dossier médical partagé.
 \end{itemize}
 
-Ces innovations qui parsèment le champ de santé émergent dans un domaine
-important qui est celui de la gestion de la douleur. 
+%% Ces innovations qui parsèment le champ de santé émergent dans un domaine
+%% important qui est celui de la gestion de la douleur. 
 
-
-L’objectif principal de ce projet de recherche  consiste à pouvoir mesurer
-les niveaux de douleur. En effet, cette solution va pouvoir aider les
-médecins à fournir un traitement adapté  aux patients affectés de douleurs
-chroniques. La mesure de la douleur n’est pas une tâche facile et constitue
-depuis longtemps un défi, même pour des professionnels de santé avertis. De
-nombreuses échelles et méthodes de mesure ont été créées pour résoudre une
-telle question
+L’objectif  principal de  ce  projet  de recherche  consiste  à pouvoir  mesurer
+automatiquement  les  niveaux  de  douleur.  Cette
+solution   pourra  aider  les médecins  à fournir  un  traitement adapté  aux
+patients affectés de douleurs chroniques. La  mesure de la douleur n’est pas une
+tâche facile et constitue depuis longtemps un défi, même pour des professionnels
+de santé  avertis. De nombreuses échelles  et méthodes de mesure  ont été créées
+pour             répondre à            une             telle             question
 \cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
-mais leurs efficacités est limitée. Jusqu’à 
-ce jour, il est encore difficile d’arriver à une mesure précise de la
-douleur. En réalité, du fait que la douleur est une sensation subjective, la
-mesure la plus utilisée est l’auto-évaluation par le patient. Même si cette
-mesure donne
-des résultats relativement acceptables, elle est encore insuffisante sur certains
-aspects, notamment quand on en vient à la notion de douleur simulée \cite{gwen2007faces}, ou,
-plus couramment, lorsque le patient a des difficultés à communiquer, comme
-lorsqu’il s’agit d’enfants ou de personnes âgées \cite{lucey2011automatically}. 
+mais leur  efficacité reste limitée.  Jusqu’à  ce jour, il est  encore difficile
+d’arriver à une mesure précise de la douleur.
 
-La création d’une méthode capable de fournir une mesure précise du niveau de douleur ressentie
-par le patient pourrait aider le système actuel de diagnostic à dépasser une
-barrière difficile : la subjectivité de la douleur du patient. 
+La raison principale pour cela est  que la douleur est une sensation subjective,
+et la  mesure la plus  utilisée est l’auto-évaluation  par le patient.   Même si
+cette  mesure donne  des  résultats relativement  acceptables,  elle est  encore
+insuffisante sur  certains aspects, notamment quand  on en vient à  la notion de
+douleur simulée~\cite{gwen2007faces}, ou, plus  couramment, lorsque le patient a
+des difficultés à communiquer, comme  lorsqu’il s’agit d’enfants ou de personnes
+âgées~\cite{lucey2011automatically}.
 
-\subsection{State of the art}
+La création  d’une méthode capable  de fournir une  mesure précise du  niveau de
+douleur ressentie par le patient pourrait  aider le système actuel de diagnostic
+à dépasser  cette barrière  difficile qu'est  la subjectivité  de la  douleur du
+patient.
+
+
+\subsection{\'Etat de l'art}
 \label{sec:org08f9dfb}
-Jusqu’à maintenant, il y a eu un certain nombre de recherches sérieuses pour
-essayer d’obtenir un système de détection de la douleur spar l’analyse des
-données biométriques (pupilles, verbales, vocales, ECG etc.).La reconnaissance
+
+Plusieurs travaux ont  d\'ej\`a essayé d’obtenir un système de détection de la douleur par l’analyse des
+données biométriques, telles ques  les pupilles, la voix, l'ECG etc.). La reconnaissance
 faciale est l'un des systèmes qui se révèle le plus prometteur pour mesurer et
-analyser la douleur d'un patient dans une temporalité rapide.  Afin d’atteindre
+analyser la douleur d'un patient efficacement.  Afin d’atteindre
 cet objectif, plusieurs systèmes ont utilisé des collections de données
-affectées de codes FACS (Facial Action Coding System) \cite{lucey2011painful}. 
+affectées de codes FACS (\emph{Facial Action Coding System})~\cite{lucey2011painful}. 
 
 Le principal travail réalisé sur ce sujet a été la recherche menée par
-l’Université de Pittsburgh "Automatically Detecting Pain in Video Through Facial
-Action Units" \cite{lucey2011automatically}. Cette recherche s’est basée principalement sur l’utilisation
-des FACS pour détecter la douleur sur des images données. Les résultats obtenus
-ont été élémentaires. Ils ont porté sur la présence ou l’absence de douleur («
+l’Université de Pittsburgh "\emph{Automatically Detecting Pain in Video Through Facial
+Action Units}" \cite{lucey2011automatically}. Cette recherche s’est basée principalement sur l’utilisation
+des FACS pour détecter la douleur à partir d'images. Les résultats obtenus
+sont restés limités, puisqu'ils ont porté sur la présence ou l’absence de douleur («
 pain or no pain »). 
 
-Une autre recherche, menée sur le même sujet, avec le même ensemble de données,
-est celle qui a été menée à l’Université d’Aalborg Danemark
-\cite{bellantonio2016spatio}. Cette recherche, plus récente, a obtenu des
-résultats plus prometteurs, en utilisant une combinaison de réseaux neuronaux
-convolutionnels, et de réseaux neuronaux récurrents. En combinant ces deux
-méthodes, il a été possible de considérer non seulement une image et ses FACS,
-mais aussi d’analyser les images préalables de la séquence considérée, et
-d’obtenir une meilleure précision des résultats. Cela permettant ainsi
-d’atteindre un échelonnement allant de « absence de douleur « (« no pain ») à
-« forte douleur » ( strong pain ») en passant par « faible douleur » (« weak
-pain »), cequi a constitué une amélioration significative. 
+Une autre recherche  menée sur le même  sujet avec les mêmes  données, est celle
+qui        a       été        menée        à       l’Université        d’Aalborg
+Danemark~\cite{bellantonio2016spatio}. Cette  recherche, plus récente,  a obtenu
+des  résultats  plus  prometteurs,  en  utilisant  une  combinaison  de  réseaux
+neuronaux convolutionnels, et de réseaux neuronaux récurrents.  En combinant ces
+deux méthodes, il  a été possible de  considérer non seulement une  image et ses
+FACS, mais aussi d’analyser les images  préalables de la séquence considérée, et
+d’obtenir  une   meilleure  précision  des  résultats.   Cela  permettant  ainsi
+d’atteindre un échelonnement allant de « absence de  douleur « (« no pain ») à «
+forte douleur » ( strong pain ») en  passant par « faible douleur » (« weak pain
+»), cequi a constitué une amélioration significative.
 
 Le point commun de ces recherche est le fait qu’elles utilisent la même base de
 données pour l’apprentissage et cela ne permet pas de fourni une précision
@@ -105,7 +108,7 @@ les expressions faciales, et ne prennent pas en considération d’autres facteu
 comme le ton de la voix, et la sémantique utilisée dans le dialogue.  Ceci afin
 d’autoriser une analyse de la composante émotionnelle, laquelle est un facteur
 important lorsqu’il s’agit de mesurer convenablement le niveau de douleur du
-patient  \cite{hale1997emotional}.   
+patient~\cite{hale1997emotional}.   
 
 
 \subsection{Methodological approach}
@@ -135,21 +138,21 @@ cette thèse sera l’exploration des moyens d’y parvenir.
 \label{sec:orgf1f9281}
 
 Comme les données sur ce sujet sont plutôt limitées, l’un des principaux
-objectifs de cette thèse sera d’entraîner des systèmes de deep learning à être
+objectifs de cette thèse sera d’entraîner des systèmes de \emph{Deep Learning} à être
 capables de mesurer de la façon la plus précise possible le niveau de douleur
-sur une vidéo, en utilisant des données réduites grâce à un coeur de facteurs de
+sur une vidéo, en utilisant des données réduites grâce à un c\oe{}ur de facteurs de
 décision importé, élaborés par des experts qui ont déjà une connaissance de la
 mesure de la douleur.  
+
 Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
 grande quantité de données à analyser, même si on prendra garde de ne pas
 sacrifier les capacités de généralisation du modèle.  
 
 
-\subsection{Scientific and technological challenges}
+\subsection{Défis scientifiques et technologiques}
 \label{sec:org70ad40f}
 
-Les défis scientifiques à explorer dans le cadre de cette thèse sont les suivants :
-
+Les défis scientifiques que nous explorerons durant cette thèse sont les suivants~:
 \begin{itemize}
 \item proposer un modèle capable de fournir efficacement une mesure de la douleur
 \item identifier les principaux points de décision qui peuvent être importés sur
