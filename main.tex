@@ -16,6 +16,14 @@
 \usepackage{hyperref}
 \usepackage{babel}
 \usepackage{minted}
+
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\topmargin}{-0.125in}
+\setlength{\textwidth}{6.25in}
+\setlength{\textheight}{8.75in}
+\parskip 5pt plus 3pt minus 2pt
+
+
 \date{}
 \title{\emph{Integrating Deep Learning in Expert Systems\\ for Medical Diagnosis}}
 \hypersetup{
@@ -32,29 +40,29 @@
 \section{Context}
 \label{sec:orga8bb14f}
 
-Le début du XXIème siècle a vu une augmentation spectaculaire d’applications
-informatiques apportant une assistance à de nombreuses activités humaines, y
-compris pour le secteur de la médecine. L’utilisation de la technologie
-appliquée à la santé est devenue un des points d’intérêt de notre société, par
-exemple pour l’emploi des robots d’assistances en chirurgie, la mesure des
+Le début  du XXIème  siècle a vu  une augmentation  spectaculaire d’applications
+informatiques apportant  une assistance  à de  nombreuses activités  humaines, y
+compris  pour  le  secteur  de  la médecine.  L’utilisation  de  la  technologie
+appliquée à la santé  est devenue un des points d’intérêt  de notre société, par
+exemple  pour l’emploi  des robots  d’assistances  en chirurgie,  la mesure  des
 données physiologiques comme le taux de sucre dans le sang pour les diabétiques,
-ou le dossier médical partagé.  
+ou le dossier médical partagé.
 
-L’objectif principal de ce projet de recherche  s’appuie sur la start up Lucine,
-créée pour apporter des solutions innovantes pour les personnes qui, comme sa
-fondatrice, souffrent de douleur chronique, ceci afin d’en diminuer l’impact sur
-la vie quotidienne et d’en assurer une prise en charge optimisée.  L’idée
+L’objectif principal de ce projet de  recherche s’appuie sur la start up Lucine,
+créée pour  apporter des solutions innovantes  pour les personnes qui,  comme sa
+fondatrice, souffrent de  douleurs chroniques, ceci afin  d’en diminuer l’impact
+sur la  vie quotidienne et d’en  assurer une prise en  charge optimisée.  L’idée
 consiste à réaliser une application destinée à un usage personnalisé, permettant
-de pouvoir mesurer automatiquement les niveaux de douleur ressentis par les
-détenteurs de l’application envisagée. Cette solution pourra aider les médecins
-à fournir un traitement adapté aux patients concernés.  
+de  pouvoir mesurer  automatiquement les  niveaux de  douleur ressentis  par les
+détenteurs de l’application envisagée. Cette  solution pourra aider les médecins
+à fournir un traitement adapté aux patients concernés.
 
 La mesure de la douleur n’est pas une tâche facile et constitue depuis longtemps
-un défi, même pour des professionnels de santé avertis. De nombreuses échelles
-et méthodes de mesure ont été créées pour répondre à une telle question
-\cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
-mais leur efficacité reste limitée. Jusqu’à ce jour, il est encore
-difficile d’arriver à une mesure précise de la douleur.  
+un défi, même pour des professionnels  de santé avertis.  De nombreuses échelles
+et   méthodes  de   mesure   ont  été   créées  pour   répondre   à  une   telle
+question~\cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
+mais leur  efficacité reste limitée.  Jusqu’à  ce jour, il est  encore difficile
+d’arriver à une mesure précise de la douleur.
 
 La raison principale pour cela est que la douleur est une sensation subjective,
 et la mesure la plus utilisée est l’auto-évaluation par le patient. Même si
@@ -79,14 +87,14 @@ efficacement.  Afin d’atteindre cet objectif, plusieurs systèmes ont utilisé
 collections  de données  affectées  de codes  FACS (\emph{Facial Action  Coding System}) \cite{lucey2011painful}.
 
 Le  principal  travail  réalisé sur  ce  sujet  a  été  la recherche  menée  par
-l’Université de Pittsburgh "\emph{Automatically  Detecting Pain in Video Through Facial  Action Units}"  \cite{lucey2011automatically}.
+l’Université de Pittsburgh "\emph{Automatically  Detecting Pain in Video Through Facial  Action Units}"~\cite{lucey2011automatically}.
 Cette  recherche s’est basée  principalement sur  l’utilisation des  FACS  pour
 détecter  la douleur  à partir d'images. Les résultats obtenus sont restés
-limités, puisqu'ils ont porté sur la présence ou l’absence de douleur (« pain or
-no pain »). 
+limités, puisqu'ils ont porté sur la présence ou l’absence de douleur (\emph{pain or
+no pain}). 
 
 Une autre recherche  menée sur le même  sujet avec les mêmes  données, est celle
-qui a été menée à l’Université d’Aalborg, Danemark \cite{bellantonio2016spatio}.
+qui a été menée à l’Université d’Aalborg, Danemark~\cite{bellantonio2016spatio}.
  Cette  recherche, plus récente,  a obtenu des  résultats  plus  prometteurs,
 en  utilisant  une  combinaison  de  réseaux neuronaux convolutionnels, et de
 réseaux neuronaux récurrents.  En combinant ces deux méthodes, il  a été
@@ -95,8 +103,8 @@ d’analyser les images  préalables de la séquence considérée, et d’obteni
 meilleure  précision  des  résultats. 
 
 Cela  permettant  ainsi d’atteindre un échelonnement allant de « absence de
-douleur « (« no pain ») à « forte douleur » ( « strong pain ») en  passant par «
-faible douleur » (« weak pain »), ce qui a constitué une première amélioration.
+douleur » (\emph{no pain}) à « forte douleur » (\emph{strong pain}) en  passant par «
+faible douleur » (\emph{weak pain}), ce qui a constitué une première amélioration.
 
 
 Le point commun de ces recherches est le fait qu’elles utilisent la même base de
@@ -113,11 +121,11 @@ patient \cite{hale1997emotional}.
 \label{sec:orgcad02fb}
 
 Face aux limitations présentées par les recherches précédemment menées, cette
-thèse propose une approche originale du problème, avec notamment l’utilisation
-d’une nouvelle base de données, générée grâce à la contribution de volontaires
+thèse propose une approche originale du problème, avec l'exploitation
+d’une nouvelle base de données, créée par Lucine grâce à la contribution de volontaires
 souffrant de douleurs chroniques (tout en respectant la réglementation CNIL
-ainsi que celles concernant les données de santé) et qui servira à une
-application utilisant le \emph{Deep Learning}.  
+ainsi que celles concernant les données de santé) et qui servira à
+développer une nouvelle méthode basée sur le \emph{Deep Learning}.  
 
 Lucine a bien perçu la nécessité, en première instance, de générer une base de
 données originale et adéquate, et prépare actuellement sa constitution. Il
@@ -150,24 +158,26 @@ systèmes experts \cite{giarratano1998expert}.
 
 Afin de réaliser notre objectif , nous allons donc développer des méthodes
 combinant les mécanismes du \emph{Deep Learning} avec les techniques des systèmes
-experts. Nous pensons définir un ensemble de règles de type "if-then-else" sur
-la base de la façon dont fonctionnent les experts humains, et entraîner des
+experts. Nous pensons définir un ensemble de règles de type "\emph{if-then-else}" basée
+sur les méthodes appliquées par les experts humains, et entraîner des
 \emph{Deep Learning} à prendre des décisions à chaque nœud de l’arbre de décisions.
 
 
 \section{Objectifs de la thèse}
 \label{sec:orgf2f9c8d}
 
-Comme les données sur ce sujet sont plutôt limitées, l’un des principaux
-objectifs de cette thèse sera d’entraîner des systèmes de \emph{Deep Learning} à être
-capables de mesurer de la façon la plus précise possible le niveau de douleur
-à partir d'une vidéo, en utilisant des données réduites grâce à un cœur de facteurs de
-décision importé, élaborés par des experts qui ont déjà une connaissance de la
-mesure de la douleur.  
+%% Comme  les données  sur  ce  sujet sont  plutôt  limitées,
 
-Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
-grande quantité de données à analyser, même si on prendra garde de ne pas
-sacrifier les capacités de généralisation du modèle.  
+L’un des  principaux objectifs de cette  thèse sera d’entraîner des  systèmes de
+\emph{Deep Learning}  à être  capables de  mesurer de la  façon la  plus précise
+possible le  niveau de douleur  à partir d'une  vidéo, en utilisant  des données
+d'entra\^inement, élaborés par  des experts qui ont déjà une  connaissance de la
+mesure de la douleur.
+
+
+%% Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
+%% grande quantité de données à analyser, même si on prendra garde de ne pas
+%% sacrifier les capacités de généralisation du modèle.  
 
 
 \subsection{Défis scientifiques et technologiques}
@@ -186,15 +196,16 @@ améliorer les modèles d’apprentissage.
 \label{sec:org66b1492}
 Cette thèse se déroulera sur une période de 36 mois et pendant toute cette
 durée, le temps de travail se répartira entre le laboratoire hôte (le LABRI,
-Université de Bordeaux), et la compagnie (Lucine) Planning
+Université de Bordeaux), et la compagnie (Lucine).
+
 \subsection{Planning}
 \label{sec:org2dc06f3}
 \begin{itemize}
 \item \textbf{M1 - M6 :} Discussion avec les experts humains pour créer un ensemble de règles et un système expert. Identification des conditions pour ces règles.
-\item \textbf{M7 - M12 :} Collecte des données permettant d’entrainer et d’évaluer les Deep Networks testant les conditions des règles du système expert.
-\item \textbf{M13 - M18 :} Entrainements et évaluations des Deep Networks à partir des données col- lectées. Premières publications (dans les domaines de l’Intelligence Articielle et médical).
+\item \textbf{M7 - M12 :} Collecte des données permettant d’entrainer et d’évaluer les \emph{Deep Networks} testant les conditions des règles du système expert.
+\item \textbf{M13 - M18 :} Entrainements et évaluations des \emph{Deep Networks} à partir des données col\-lectées. Premières publications (dans les domaines de l’Intelligence Articielle et médical).
 \item \textbf{M19 - M24 :} Seconde itération. Nouvelles captures de données selon l’experience acquise lors de la première itération.
-\item \textbf{M25 - M30 :} Nouveaux entrainements et évaluations des Deep Networks. Nouvelles pub- lications.
+\item \textbf{M25 - M30 :} Nouveaux entrainements et évaluations des \emph{Deep Networks}. Nouvelles pub\-lications.
 \item \textbf{M31 - M36 :} Rédaction et défense de la thèse.
 \end{itemize}
 
