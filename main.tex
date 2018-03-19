@@ -31,7 +31,7 @@
  pdftitle={\emph{Integrating Deep Learning in Expert Systems\\ for Medical Diagnosis}},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 27.0.50 (Org mode 9.1.2)}, 
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.2)},
  pdflang={Frenchb}}
 \begin{document}
 
@@ -48,37 +48,72 @@ exemple  pour l’emploi  des robots  d’assistances  en chirurgie,  la mesure 
 données physiologiques comme le taux de sucre dans le sang pour les diabétiques,
 ou le dossier médical partagé.
 
-L’objectif principal de ce projet de  recherche s’appuie sur la start up Lucine,
-créée pour  apporter des solutions innovantes  pour les personnes qui,  comme sa
-fondatrice, souffrent de  douleurs chroniques, ceci afin  d’en diminuer l’impact
-sur la  vie quotidienne et d’en  assurer une prise en  charge optimisée.  L’idée
-consiste à réaliser une application destinée à un usage personnalisé, permettant
-de  pouvoir mesurer  automatiquement les  niveaux de  douleur ressentis  par les
-détenteurs de l’application envisagée. Cette  solution pourra aider les médecins
-à fournir un traitement adapté aux patients concernés.
 
-La mesure de la douleur n’est pas une tâche facile et constitue depuis longtemps
-un défi, même pour des professionnels  de santé avertis.  De nombreuses échelles
-et   méthodes  de   mesure   ont  été   créées  pour   répondre   à  une   telle
-question~\cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
-mais leur  efficacité reste limitée.  Jusqu’à  ce jour, il est  encore difficile
-d’arriver à une mesure précise de la douleur.
+Ce projet de recherche s’appuie sur la Start up Lucine, créée pour apporter des
+solutions innovantes pour les personnes qui, comme sa fondatrice, souffrent de
+douleurs chroniques, ceci afin d’en diminuer l’impact sur la vie quotidienne et
+d’en assurer une prise en charge optimisée. L’idée consiste à réaliser une
+application destinée à un usage personnalisé, permettant de pouvoir mesurer,
+analyser et soulager la douleur ressentie par les patients.
 
-La raison principale pour cela est que la douleur est une sensation subjective,
-et la mesure la plus utilisée est l’auto-évaluation par le patient. Même si
-cette mesure donne des résultats relativement acceptables, elle est encore
-insuffisante sur certains aspects, notamment quand on en vient à la notion de
-douleur simulée \cite{gwen2007faces}, ou, plus  couramment, lorsque le patient a
-des difficultés à communiquer, comme  lorsqu’il s’agit d’enfants ou de personnes
-âgées \cite{lucey2011automatically}.
+%L’objectif principal de ce projet de  recherche s’appuie sur la start up Lucine,
+%créée pour  apporter des solutions innovantes  pour les personnes qui,  comme sa
+%fondatrice, souffrent de  douleurs chroniques, ceci afin  d’en diminuer l’impact
+%sur la  vie quotidienne et d’en  assurer une prise en  charge optimisée.  L’idée
+%consiste à réaliser une application destinée à un usage personnalisé, permettant
+%de  pouvoir mesurer  automatiquement les  niveaux de  douleur ressentis  par les
+%détenteurs de l’application envisagée. Cette  solution pourra aider les médecins
+%à fournir un traitement adapté aux patients concernés.
+
+Ce travail de thèse va principalement s’intéresser aux mécanismes de mesures et
+d’analyses de la douleur par l’image et le son, l’ensemble coordonné par les
+avancés récentes en matière d'intelligence artificielle. En effet, la mesure
+de la douleur n’est pas une tâche facile et constitue depuis longtemps un défi,
+même pour des professionnels de santé avertis. De nombreuses échelles et
+méthodes de mesure ont été créées pour répondre à une telle question
+\cite{wong1996wong,mccaffery1999pain,portenoy1996visual,melzack1975mcgill,galer1997development,gracely1988descriptor}
+mais leur efficacité reste limitée. Jusqu’à ce jour, il est encore difficile d’arriver à une mesure précise
+de la douleur. La raison principale pour cela est que la douleur est une
+sensation subjective et la mesure la plus utilisée est l’auto-évaluation par le
+patient. Même si cette mesure donne des résultats relativement acceptables, elle
+est encore insuffisante sur certains aspects, notamment quand on en vient à la
+notion de douleur simulée \cite{lucey2011automatically}., ou, plus couramment, lorsque le patient a des
+difficultés à communiquer, comme lorsqu’il s’agit d’enfants ou de personnes
+âgées.
+
+% La création d’une méthode capable de fournir une mesure précise du niveau de
+% douleur ressentie1 par le patte{gwen2007faces}, ou, plus  couramment, lorsque le patient a
+% des difficultés à communiquer, comme  lorsqu’il s’agit d’enfants ou de personnes
+% âgées \cite{lucey2011automatically}.
 
 La création  d’une méthode capable  de fournir une  mesure précise du  niveau de
 douleur ressentie par le patient pourrait  aider le système actuel de diagnostic
 à dépasser  cette barrière  difficile qu'est  la subjectivité  de la  douleur du
 patient.
 
+Afin de comprendre les objectifs et la stratégie de cette recherche, il est
+important de faire un état de l’art des méthodologies utilisées pour mesurer la
+douleur d’un patient2 d’une part et un état de l’art des méthodologies pour analyser les émotions.
+
 \subsection{État de l’art}
 \label{sec:org8119c98}
+à
+\subsubsection{Techniqe d'analyse et de mesure de la douleur en milieux
+  cliniques}
+
+La description précise de la douleur par le patient est difficile à obtenir.
+L'étiologie de la douleur est souvent inconnue. Le caractère subjectif de la
+plainte douloureuse rend difficile son évaluation. Cette subjectivité s'exprime
+dans le ressenti du patient qui souffre et du médecin qui l'évalue. L’expression
+de la douleur peut prendre plusieurs formes : plaintes verbales, non-verbales,
+postures, agressivité etc.
+
+Pour établir un bilan douleur fiable, il est nécessaire de faire un état des
+lieux historique et physiologique du patient : historique médical, traitement en
+cours, bilan neurologique, clinique et évaluation psychologique et sociale
+(contexte familial, environnement de vie, etc. ...).
+{\color{red}Les professionnels de santé font usage de plusieurs outils de mesure de la douleur qui ne sont pas très efficaces au quotidien et/ou en urgence.}
+
 Plusieurs travaux  ont déjà essayé d’obtenir  un système de détection  de la
 douleur par  l’analyse des  données biométriques, telles  ques les  pupilles, la
 voix, l'ECG etc.). La reconnaissance faciale est l'un des systèmes qui se révèle
@@ -91,7 +126,7 @@ l’Université de Pittsburgh "\emph{Automatically  Detecting Pain in Video Thro
 Cette  recherche s’est basée  principalement sur  l’utilisation des  FACS  pour
 détecter  la douleur  à partir d'images. Les résultats obtenus sont restés
 limités, puisqu'ils ont porté sur la présence ou l’absence de douleur (\emph{pain or
-no pain}). 
+no pain}).
 
 Une autre recherche  menée sur le même  sujet avec les mêmes  données, est celle
 qui a été menée à l’Université d’Aalborg, Danemark~\cite{bellantonio2016spatio}.
@@ -100,7 +135,7 @@ en  utilisant  une  combinaison  de  réseaux neuronaux convolutionnels, et de
 réseaux neuronaux récurrents.  En combinant ces deux méthodes, il  a été
 possible de  considérer non seulement une  image et ses FACS, mais aussi
 d’analyser les images  préalables de la séquence considérée, et d’obtenir  une
-meilleure  précision  des  résultats. 
+meilleure  précision  des  résultats.
 
 Cela  permettant  ainsi d’atteindre un échelonnement allant de « absence de
 douleur » (\emph{no pain}) à « forte douleur » (\emph{strong pain}) en  passant par «
@@ -115,7 +150,7 @@ les expressions faciales, et ne prennent pas en considération d’autres facteu
 comme le ton de la voix, et la sémantique utilisée dans le dialogue. Ces
 facteurs permettent pourtant une analyse de la composante émotionnelle, un facteur
 important lorsqu’il s’agit de mesurer convenablement le niveau de douleur du
-patient \cite{hale1997emotional}.   
+patient \cite{hale1997emotional}.
 
 \subsection{Approche}
 \label{sec:orgcad02fb}
@@ -125,7 +160,7 @@ thèse propose une approche originale du problème, avec l'exploitation
 d’une nouvelle base de données, créée par Lucine grâce à la contribution de volontaires
 souffrant de douleurs chroniques (tout en respectant la réglementation CNIL
 ainsi que celles concernant les données de santé) et qui servira à
-développer une nouvelle méthode basée sur le \emph{Deep Learning}.  
+développer une nouvelle méthode basée sur le \emph{Deep Learning}.
 
 Lucine a bien perçu la nécessité, en première instance, de générer une base de
 données originale et adéquate, et prépare actuellement sa constitution. Il
@@ -148,13 +183,13 @@ quantitatives de la base de données envisagée. L’idée consiste à compenser
 l’insuffisance en volume de l’enquête en utilisant l’expertise des acteurs de
 terrain comme les médecins et les spécialistes de la douleur, car ils ont une
 longue expérience et une bonne connaissance du problème, et ne devraient pas
-être exclus de l’approche proposée.  
+être exclus de l’approche proposée.
 
 En effet, un praticien utilise autre chose qu’une simple image pour mesurer la
 douleur. Il prend en considération de nombreux autres facteurs. Le projet
 propose donc d’utiliser cette expérience pour compenser le faible volume de
 données d’entraînement, ce qui pourrait se comparer au fonctionnement des
-systèmes experts \cite{giarratano1998expert}.  
+systèmes experts \cite{giarratano1998expert}.
 
 Afin de réaliser notre objectif , nous allons donc développer des méthodes
 combinant les mécanismes du \emph{Deep Learning} avec les techniques des systèmes
@@ -177,7 +212,7 @@ mesure de la douleur.
 
 %% Il s’agira ainsi de rendre le processus d’apprentissage moins dépendant de la
 %% grande quantité de données à analyser, même si on prendra garde de ne pas
-%% sacrifier les capacités de généralisation du modèle.  
+%% sacrifier les capacités de généralisation du modèle.
 
 
 \subsection{Défis scientifiques et technologiques}
